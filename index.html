@@ -16,25 +16,74 @@
   </head>
   <body>
     <!-- Wrapper div -->
-    <div class="flip-container" id="main-container">
+    <div class="flip-container img-responsive" id="main-container">
       <div class="flipped">
         <!-- Div front side  -->
         <div class="front">
           <h1>Daily ToDo List</h1>
-          <i class="fa fa-pencil fa-4x" aria-hidden="true"></i>
-          <i class="fa fa-list fa-4x" aria-hidden="true"></i>
-          <i class="fa fa-coffee fa-4x" aria-hidden="true"></i>
+          <div class="pencil-icon">
+            <div class="pencil-1">
+              <i class="fa fa-pencil" aria-hidden="true"></i>
+            </div>
+            <div class="pencil-2">
+              <i class="fa fa-pencil fa-2x" aria-hidden="true"></i>
+            </div>
+            <div class="pencil-3">
+              <i class="fa fa-pencil fa-3x" aria-hidden="true"></i>
+            </div>
+            <div class="pencil-4">
+              <i class="fa fa-pencil fa-4x" aria-hidden="true"></i>
+            </div>
+          </div>
+          <div class="list-icon">
+            <div class="list-1">
+              <i class="fa fa-list" aria-hidden="true"></i>
+            </div>
+            <div class="list-2">
+              <i class="fa fa-list fa-2x" aria-hidden="true"></i>
+            </div>
+            <div class="list-3">
+              <i class="fa fa-list fa-3x" aria-hidden="true"></i>
+            </div>
+            <div class="list-4">
+              <i class="fa fa-list fa-4x" aria-hidden="true"></i>
+            </div>
+          </div>
+          <div class="coffee-icon">
+            <div class="coffee-1">
+              <i class="fa fa-coffee" aria-hidden="true"></i>
+            </div>
+            <div class="coffee-2">
+              <i class="fa fa-coffee fa-2x" aria-hidden="true"></i>
+            </div>
+            <div class="coffee-3">
+              <i class="fa fa-coffee fa-3x" aria-hidden="true"></i>
+            </div>
+            <div class="coffee-4">
+              <i class="fa fa-coffee fa-4x" aria-hidden="true"></i>
+            </div>
+          </div>
         </div> <!-- end front side-->
         <!-- Div: Back side -->
         <div class="back">
-          <h1>Add items</h1>
+          <h1>Add items to the list</h1>
+          <div class="container-fluid">
           <div class="row">
             <!-- Input field and Add button -->
             <div class="col-md-12">
               <input type="text" id="todoInput" value="">
+            </div>
+          </div>
+            <div class="center-block">
+            <div class="row">
+              <div class="col-md-6">
               <button type="button" class="btn btn-primary" onclick="addItem()" id="addButton">Add</button>
+</div>
+<div class="col-md-6">
               <button type="button" class="btn btn-primary" onclick="clearList()" id="clearButton">Clear</button>
+            </div>
             </div> <!-- end col-md -12 -->
+          </div>
             <!-- Div where item list will appear -->
             <div class="col-md-12" id="listItems">
               <ul id="myUl"> </ul>
@@ -42,6 +91,7 @@
             <!-- end col-md-12 -->
           </div>
           <!-- end row -->
+        </div>
         </div>
         <!-- back -->
       </div>

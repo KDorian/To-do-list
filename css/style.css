@@ -4,20 +4,21 @@
              BODY STYLE
 ----------------------------- */
 
-html,
+/*html,
 body {
-	height:100%;
-}
+	height:100%;}*/
 
 body {
-background-color : #F9F9FB;
-font-family : 'Roboto Condensed', sans-serif;
-font-size : 30px;
-opacity : 1;
-color : #FFFFFF;
-background : url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/450347/index.jpeg");
-background-size : cover;
+background-color: #F9F9FB;
+font-family: 'Roboto Condensed', sans-serif;
+font-size: 30px;
+opacity: 1;
+color: #FFFFFF;
+background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/450347/index.jpeg");
+background-size: cover;
 background-repeat: no-repeat;
+
+height: 100%;
 }
 
 /* ---------------------------
@@ -25,12 +26,12 @@ background-repeat: no-repeat;
 ----------------------------- */
 
 #main-container {
-width : 35.5%;
-height : 550px;
-margin : 0 auto;
-margin-top : 250px;
-text-align : center;
-perspective : 1000px;
+width: 60%;
+height: 100%;
+margin: 0 auto;
+margin-top : 16%;
+text-align: center;
+/*perspective : 1000px;*/
 }
 
 /* ---------------------------
@@ -40,57 +41,59 @@ perspective : 1000px;
 /* flip container on hover*/
 .flip-container:hover .flipped,
 .flip-container.hover .flipped {
-transform : rotateY(180deg);
+transform: rotateY(180deg);
 }
 
 /* width and height for main flip container and front and back sides */
 .flip-container,
 .front,
 .back {
-width : 100%;
-height : 450px;
+width: 100%;
+height: 450px;
 }
 
 /* flip speed  */
 .flipped {
-transition : 1.6s;
-transform-style : preserve-3d;
-position : relative;
+transition: 1.6s;
+transform-style: preserve-3d;
+position: relative;
 }
 
 /* hide back on flip */
 .front,
 .back {
-backface-visibility : hidden;
-position : absolute;
+backface-visibility: hidden;
+position: absolute;
 }
 
 /* front pane placed above back with z index */
 .front {
-z-index : 1;
-transform : rotateY(0deg);
-text-align : center;
+z-index: 1;
+transform: rotateY(0deg);
+text-align: center;
+width: 100%;
 }
 
 /* back side rotated to 180 deg to place at the back*/
 .back {
-transform : rotateY(180deg);
+transform: rotateY(180deg);
 }
 
 /*  --------------------------
           FRONT
 ------------------------------  */
 h1 {
-color : black;
+color: black;
+font-size: 5vw;
 }
 
 .fa {
-padding : 10px;
-color : #F26345;
+padding: 10px;
+color: #F26345;
 }
 
 .fa.fa-list {
-color : black;
+color: black;
 }
 
 /*  --------------------------
@@ -98,51 +101,125 @@ color : black;
 ----------------------------  */
 
 #todoInput {
-border : none;
-background-color : #ebaea3;
-width : 70%;
-height : 50px;
-color : #FFFFFF;
+border: none;
+background-color: #ebaea3;
+width: 70%;
+height: 50px;
+color: #FFFFFF;
 }
 
 /* Btn styles for add and clear buttons */
 .btn {
-background-color : transparent;
-border : black solid 2px;
-border-radius : 10px;
-width : 72px;
-height : 42px;
-text-align : center;
-color : black;
-font-size : 15px;
+background-color: transparent;
+border: black solid 2px;
+border-radius: 10px;
+width: 72px;
+height: 42px;
+text-align: center;
+color: black;
+font-size: 15px;
 }
 
 .btn:hover {
-background-color : #ebaea3;
-color : black;
-border : none;
+background-color: #ebaea3;
+color: black;
+border: none;
 }
 
 /*  style for 2nd col-md-12 div with id set to listItems */
 #listItems {
-width : 100%;
-text-align : center;
-color : black;
+width: 100%;
+text-align: center;
+color: black;
 }
 
 /* style for li items created dynamically  through JS */
 li {
-list-style : none;
-text-align : left;
+list-style: none;
+text-align: left;
 }
 
 /* styles for buttons besides each individual list item */
 .listItemButton {
-background : transparent;
-border : black solid 5px;
-height : 50px;
-width : 50px;
-border-radius : 50px;
-margin : 3px;
-color : red;
+background: transparent;
+border: black solid 5px;
+height: 50px;
+width: 50px;
+border-radius: 50px;
+margin: 3px;
+color: red;
+}
+
+.pencil-icon,
+.list-icon,
+.coffee-icon {
+	display: inline;
+}
+
+@media (min-width: 1201px) {
+.pencil-4 {display:inline-block;}
+.pencil-3 {display:none;}
+.pencil-2 {display:none;}
+.pencil-1 {display:none;}
+
+.list-4 {display:inline-block;}
+.list-3 {display:none;}
+.list-2 {display:none;}
+.list-1 {display:none;}
+
+.coffee-4 {display:inline-block;}
+.coffee-3 {display:none;}
+.coffee-2 {display:none;}
+.coffee-1 {display:none;}
+}
+
+@media (max-width: 1200px) and (min-width: 801px) {
+.pencil-4 {display:none;}
+.pencil-3 {display:inline-block;}
+.pencil-2 {display:none;}
+.pencil-1 {display:none;}
+
+.list-4 {display:none;}
+.list-3 {display:inline-block;}
+.list-2 {display:none;}
+.list-1 {display:none;}
+
+.coffee-4 {display:none;}
+.coffee-3 {display:inline-block;}
+.coffee-2 {display:none;}
+.coffee-1 {display:none;}
+}
+
+@media (max-width: 800px) and (min-width: 421px) {
+.pencil-4 {display:none;}
+.pencil-3 {display:none;}
+.pencil-2 {display:inline-block;}
+.pencil-1 {display:none;}
+
+.list-4 {display:none;}
+.list-3 {display:none;}
+.list-2 {display:inline-block;}
+.list-1 {display:none;}
+
+.coffee-4 {display:none;}
+.coffee-3 {display:none;}
+.coffee-2 {display:inline-block;}
+.coffee-1 {display:none;}
+}
+
+@media (max-width: 420px) {
+.pencil-4 {display:none;}
+.pencil-3 {display:none;}
+.pencil-2 {display:none;}
+.pencil-1 {display:inline-block;}
+
+.list-4 {display:none;}
+.list-3 {display:none;}
+.list-2 {display:none;}
+.list-1 {display:inline-block;}
+
+.coffee-4 {display:none;}
+.coffee-3 {display:none;}
+.coffee-2 {display:none;}
+.coffee-1 {display:inline-block;}
 }

@@ -37,3 +37,9 @@ function addItem() {
     } // end of if
   } // end of else
 } // end of function
+
+// function reset
+
+function reset() {
+  document.getElementById("todoInput").value = "";
+} // end of function

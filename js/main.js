@@ -5,7 +5,6 @@ var taskList = [];
 function addItem() {
   var task = document.getElementById("todoInput").value;
   var ul = document.getElementById("myUl");
-  //alert(task);
 
   // prevents user form adding blank to do element
   if(task.trim().length === 0) {
@@ -14,7 +13,6 @@ function addItem() {
   else {
     if(taskList.length < 5){
       taskList.push(task);
-      //alert(taskList);
 
       var li = document.createElement("li");
       var text = document.createTextNode(task);
@@ -44,14 +42,31 @@ function reset() {
   document.getElementById("todoInput").value = "";
 } // end of function
 
-
 // function checkMe(item)
 
 function checkMe(item) {
-  //alert(item);
   var liTag = item.parentElement;
-  // alert(liTag);
   liTag.style.textDecoration = (liTag.style.textDecoration === "line-through") ? "none" : "line-through";
-
-
 } // end of function
+
+// function removeMe(item)
+
+function removeMe(item) {
+  var liTag = item.parentElement;
+  var ulTag = liTag.parentElement;
+  ulTag.removeChild(liTag);
+  taskList.pop();
+} // end of function
+
+// function enterKey
+
+function enterKey() {
+  var input = document.getElementById("todoInput");
+  input.onkeyup = function(key) {
+    if(key.keyCode === 13) {
+      addItem();
+    } // end of if
+  } // end of onkeyup
+} //end of function
+
+enterKey();

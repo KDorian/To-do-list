@@ -70,3 +70,11 @@ function enterKey() {
 } //end of function
 
 enterKey();
+
+// function clearList
+
+function clearList() {
+  var ul = document.getElementById("myUl");
+  ul.innerHTML = "";
+  taskList.splice(0, taskList.length);
+} // end of function

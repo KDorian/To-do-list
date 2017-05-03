@@ -43,3 +43,15 @@ function addItem() {
 function reset() {
   document.getElementById("todoInput").value = "";
 } // end of function
+
+
+// function checkMe(item)
+
+function checkMe(item) {
+  //alert(item);
+  var liTag = item.parentElement;
+  // alert(liTag);
+  liTag.style.textDecoration = (liTag.style.textDecoration === "line-through") ? "none" : "line-through";
+
+
+} // end of function
